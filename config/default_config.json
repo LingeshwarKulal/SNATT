@@ -1,0 +1,121 @@
+{
+  "application": {
+    "name": "SNATT",
+    "version": "0.1.0",
+    "theme": "dark",
+    "auto_save": true,
+    "auto_save_interval": 300,
+    "check_updates": true
+  },
+  "network": {
+    "default_timeout": 10,
+    "max_concurrent_connections": 50,
+    "retry_attempts": 3,
+    "retry_delay": 2,
+    "ping_timeout": 1,
+    "ping_count": 1,
+    "ssh_port": 22,
+    "telnet_port": 23,
+    "snmp_port": 161,
+    "enable_telnet": false
+  },
+  "discovery": {
+    "default_subnet": "192.168.1.0/24",
+    "methods": ["icmp", "snmp", "ssh"],
+    "parallel_scan": true,
+    "max_threads": 100,
+    "snmp_community": "public",
+    "snmp_version": "2c"
+  },
+  "backup": {
+    "directory": "backups",
+    "retention_days": 90,
+    "auto_backup_enabled": false,
+    "auto_backup_schedule": "0 2 * * *",
+    "compression_enabled": false,
+    "include_startup_config": true,
+    "include_running_config": true,
+    "naming_format": "{hostname}_{timestamp}.cfg"
+  },
+  "reporting": {
+    "directory": "reports",
+    "company_name": "Network Engineering Team",
+    "logo_path": "",
+    "default_format": "excel",
+    "include_charts": true,
+    "include_recommendations": true,
+    "date_format": "%Y-%m-%d %H:%M:%S"
+  },
+  "logging": {
+    "directory": "logs",
+    "level": "INFO",
+    "max_file_size": 10485760,
+    "backup_count": 5,
+    "console_logging": true,
+    "file_logging": true,
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  },
+  "database": {
+    "type": "sqlite",
+    "path": "config/snatt.db"
+  },
+  "security": {
+    "credential_storage": "keyring",
+    "enable_audit_log": true,
+    "session_timeout": 3600
+  },
+  "diagnostics": {
+    "workflows": {
+      "interface_health": {
+        "name": "Interface Health Check",
+        "commands": [
+          "show ip interface brief",
+          "show interface status"
+        ],
+        "enabled": true
+      },
+      "cpu_memory": {
+        "name": "CPU & Memory Check",
+        "commands": [
+          "show processes cpu sorted",
+          "show memory statistics"
+        ],
+        "enabled": true
+      },
+      "connectivity": {
+        "name": "Connectivity Check",
+        "commands": [
+          "show ip route",
+          "show arp",
+          "show cdp neighbors"
+        ],
+        "enabled": true
+      },
+      "log_analysis": {
+        "name": "Log Analysis",
+        "commands": [
+          "show logging"
+        ],
+        "enabled": true
+      }
+    },
+    "thresholds": {
+      "cpu_warning": 80,
+      "cpu_critical": 90,
+      "memory_warning": 80,
+      "memory_critical": 90
+    }
+  },
+  "gui": {
+    "window_size": "1200x800",
+    "window_title": "SNATT - Smart Network Automation Tool",
+    "font_family": "Segoe UI",
+    "font_size": 12,
+    "color_scheme": {
+      "critical": "#FF4444",
+      "warning": "#FFA500",
+      "normal": "#44FF44",
+      "info": "#4444FF"
+    }
+  }
+}

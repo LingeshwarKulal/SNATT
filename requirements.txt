@@ -1,0 +1,71 @@
+# SNATT - Smart Network Automation and Troubleshooting Tool
+# Python Dependencies
+
+# GUI Framework
+customtkinter>=5.2.0
+pillow>=10.0.0
+
+# Network Automation Libraries
+netmiko>=4.3.0
+napalm>=4.1.0
+paramiko>=3.3.1
+
+# Network Discovery & Scanning
+scapy>=2.5.0
+pysnmp>=4.4.12
+
+# Data Processing & Analysis
+pandas>=2.1.0
+numpy>=1.24.0
+
+# Excel Export
+openpyxl>=3.1.2
+xlsxwriter>=3.1.2
+
+# PDF Export
+reportlab>=4.0.4
+
+# Charts & Visualization
+matplotlib>=3.7.2
+
+# Database
+# SQLite is built into Python, no package needed
+
+# Credential Security
+keyring>=24.2.0
+cryptography>=41.0.3
+
+# Configuration Management
+python-dotenv>=1.0.0
+
+# Task Scheduling
+apscheduler>=3.10.4
+
+# HTTP/API Requests
+requests>=2.31.0
+
+# Logging Enhancement
+colorlog>=6.7.0
+
+# CLI Utilities
+click>=8.1.6
+
+# Development Tools
+# Testing
+pytest>=7.4.0
+pytest-cov>=4.1.0
+pytest-mock>=3.11.1
+
+# Code Quality
+black>=23.7.0
+flake8>=6.1.0
+pylint>=2.17.5
+mypy>=1.5.0
+
+# Documentation
+sphinx>=7.1.2
+sphinx-rtd-theme>=1.3.0
+
+# Type Hints
+types-requests>=2.31.0
+types-paramiko>=3.3.0

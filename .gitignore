@@ -48,6 +48,13 @@ env/
 nosetests.xml
 coverage.xml
 *.cover
+
+# Node.js / Next.js (web directory)
+web/node_modules/
+web/.next/
+web/out/
+web/.env*.local
+web/.vercel
 *.log
 .pytest_cache/
 htmlcov/

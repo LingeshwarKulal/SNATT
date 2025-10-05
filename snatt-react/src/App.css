@@ -248,7 +248,7 @@ body {
 
 .diagnostic-result-header {
   display: flex;
-  justify-between;
+  justify-content: space-between;
   align-items: start;
   margin-bottom: 0.5rem;
 }

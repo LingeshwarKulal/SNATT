@@ -1,12 +1,18 @@
 # SNATT - Smart Network Automation and Troubleshooting Tool
 
-![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.8%2B-brightgreen.svg)
+![React](https://img.shields.io/badge/react-19-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## 🎯 Overview
 
-SNATT is a powerful Python-based GUI application designed to automate network device discovery, monitoring, troubleshooting, and configuration management. Built for network engineers who want to reduce manual CLI operations and increase efficiency.
+SNATT is available as both a **desktop application** (Python + CustomTkinter) and a **web application** (React + Vite). Choose the version that fits your needs:
+
+- **Desktop**: Direct SSH connections, local operations, full network device access
+- **Web**: Browser-based, no installation, team collaboration, Vercel-deployable
+
+Both versions share the same 5 core panels: Discovery, Diagnostics, Backup, Reports, and Settings.
 
 ## ✨ Key Features
 
@@ -19,17 +25,19 @@ SNATT is a powerful Python-based GUI application designed to automate network de
 
 ## 🚀 Quick Start
 
-### Prerequisites
+### Desktop Application (Python)
 
+**Prerequisites:**
 - Python 3.8 or higher
 - pip package manager
 - Network access to devices you want to manage
 
-### Installation
+**Installation:**
 
-1. **Clone or download the project:**
+1. **Clone the repository:**
    ```powershell
-   cd e:\automa
+   git clone https://github.com/LingeshwarKulal/SNATT.git
+   cd SNATT
    ```
 
 2. **Create a virtual environment (recommended):**
@@ -48,10 +56,41 @@ SNATT is a powerful Python-based GUI application designed to automate network de
    python src/main.py
    ```
 
-5. **Try the demo (optional):**
-   - Click **"🎭 Load Demo Data"** on the welcome screen to populate with example devices
-   - Or run the command-line demo: `python demo.py`
-   - See `DEMO_GUIDE.md` for complete demo instructions
+### Web Application (React + Vite)
+
+**Prerequisites:**
+- Node.js 18+ and npm
+
+**Local Development:**
+
+1. **Navigate to React app:**
+   ```powershell
+   cd snatt-react
+   ```
+
+2. **Install dependencies:**
+   ```powershell
+   npm install
+   ```
+
+3. **Run development server:**
+   ```powershell
+   npm run dev
+   ```
+   Visit http://localhost:5173
+
+4. **Build for production:**
+   ```powershell
+   npm run build
+   ```
+
+**Deploy to Vercel:**
+1. Go to [vercel.com](https://vercel.com)
+2. Import `LingeshwarKulal/SNATT`
+3. Set Root Directory to `snatt-react`
+4. Deploy!
+
+See **REACT_DEPLOYMENT.md** for detailed instructions.
 
 ## 📁 Project Structure
 
